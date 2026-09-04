@@ -1,0 +1,599 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Libre+Franklin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&family=Libre+Franklin:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: Georgia, "Libre Franklin", serif;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: "Abhaya Libre", serif;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HOME / HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)
+        ),
+        url("images/justice.jpg");
+
+    background-size: cover;
+    background-position: 0% 100%;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.hero-content {
+    width: 60%;
+
+    padding-left: 7vw;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.tagline {
+    color: #d2a084;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 30px;
+
+    letter-spacing: 0.5px;
+}
+
+
+.hero h1 {
+    max-width: 520px;
+
+    font-size: clamp(1.6rem, 3vw, 3rem);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    /* font-family: "Lora", sans serif; */
+}
+
+
+.hero-buttons {
+    display: flex;
+
+    gap: 40px;
+
+    margin-top: 45px;
+}
+
+
+.btn {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-width: 165px;
+
+    padding: 14px 25px;
+
+    background: #c58d72;
+
+    color: #111;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+
+.btn:hover {
+    background: #e0b09a;
+
+    transform: translateY(-2px);
+}
+
+
+.hero-image {
+    width: 45%;
+    height: 100vh;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+.home-logo {
+    position: absolute;
+    top: 30px;
+    left: 6vw;
+    z-index: 10;
+
+    font-family: "Abhaya Libre", serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #d2a084;
+}
+
+
+/* =========================================
+   INNER PAGE HEADER
+========================================= */
+
+.page-header {
+    width: 100%;
+
+    padding: 30px 6vw;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #211b18;
+}
+
+
+.logo {
+    color: #c58d72;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.back-button {
+    font-family: Arial, sans-serif;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+
+    color: #d2a084;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+    color: #fff;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-page {
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 6vw;
+}
+
+
+.services-content {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8vw;
+
+    align-items: center;
+}
+
+
+.services-text h1 {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+
+    font-weight: 500;
+
+    margin-bottom: 60px;
+}
+
+
+.practice-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+}
+
+
+.practice-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.practice-item span {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 18px;
+
+    background: #c58d72;
+
+    color: #111;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.65rem;
+}
+
+
+.practice-item p {
+    font-size: 1.15rem;
+
+    color: #ddd;
+}
+
+
+.services-image img {
+    width: 90%;
+
+    max-height: 520px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-page {
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 6vw;
+}
+
+
+.contact-content {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 8vw;
+
+    align-items: center;
+}
+
+
+.contact-image img {
+    width: 100%;
+
+    max-height: 550px;
+
+    object-fit: cover;
+    filter: brightness(0.9);
+
+}
+
+
+.contact-info h1 {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+
+    font-weight: 500;
+
+    margin-bottom: 55px;
+}
+
+
+.contact-item {
+    margin-bottom: 35px;
+}
+
+
+.contact-item h3 {
+    color: #c58d72;
+
+    font-size: 1.05rem;
+
+    font-weight: normal;
+
+    margin-bottom: 8px;
+}
+
+
+.contact-item a {
+    color: #ddd;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.95rem;
+
+    transition: 0.3s;
+}
+
+
+.contact-item a:hover {
+    color: #c58d72;
+}
+
+
+.social-links {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 12px;
+}
+
+
+.social-links a {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #c58d72;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #c58d72;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.3s;
+}
+
+
+.social-links a:hover {
+    background: #c58d72;
+
+    color: #000;
+}
+
+
+.footer-note {
+    margin-top: 70px;
+
+    max-width: 300px;
+
+    color: #888;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.75rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) and (orientation: portrait){
+
+    .services-image,
+    .contact-image {
+       display: none;
+}
+
+    .hero {
+        min-height: 100vh;
+
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        
+    }
+
+    .hero {
+       background-position: 70% center;
+    }  
+
+
+    .hero-content {
+        width: 100%;
+
+        padding: 60px 30px 50px;
+    }
+
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+
+    .hero-buttons {
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .btn {
+        min-width: 140px;
+    }
+
+
+    .hero-image {
+        width: 100%;
+
+        height: 55vh;
+    }
+
+
+    .page-header {
+        padding: 25px;
+    }
+
+
+    .services-page,
+    .contact-page {
+        padding: 60px 25px;
+    }
+
+
+    .services-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .services-text h1,
+    .contact-info h1 {
+        margin-bottom: 40px;
+    }
+
+
+    .contact-image {
+        order: 2;
+    }
+
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+
+    .services-page,
+    .contact-page {
+        min-height: calc(100vh - 80px);
+        height: calc(100vh - 80px);
+        padding: 20px 5vw;
+        overflow: hidden;
+    }
+
+    .services-content,
+    .contact-content {
+        height: 100%;
+        align-items: center;
+        gap: 5vw;
+    }
+
+    .services-image img,
+    .contact-image img {
+        max-height: 70vh;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .services-text h1,
+    .contact-info h1 {
+        margin-bottom: 25px;
+        font-size: 2.5rem;
+    }
+
+    .practice-list {
+        gap: 15px;
+    }
+
+    .practice-item p {
+        font-size: 0.9rem;
+    }
+
+    .contact-item {
+        margin-bottom: 15px;
+    }
+
+    .footer-note {
+        margin-top: 25px;
+    }
+}
+
+
+
+@media (max-width: 800px) and (orientation: portrait) {
+
+    .hero {
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50%);
+        width: 100%;
+        padding: 0 8vw;
+        text-align: center;
+    }
+
+}
